@@ -1,0 +1,7 @@
+{
+  "name": "merceriaRosa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
