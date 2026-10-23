@@ -1,0 +1,12 @@
+/* Archivo: src/app/components/producto-item/producto-item.component.scss */
+ion-card {
+  background-color: #493A35; 
+  color: #FFF8F0;
+  border-radius: 12px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: Asegurar que los elementos internos no hereden colores oscuros raros */
+ion-item {
+  --background: transparent; 
+}

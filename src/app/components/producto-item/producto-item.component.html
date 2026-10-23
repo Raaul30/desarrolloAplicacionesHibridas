@@ -10,16 +10,16 @@
       />
     </ion-thumbnail>
 
-    <ion-checkbox
+    <!-- <ion-checkbox
       slot="start"
       [checked]="producto.cantidad > 0">
-    </ion-checkbox>
+    </ion-checkbox> -->
 
     <ion-label [class.tachado]="producto.cantidad <= 0">
       {{ producto.nombreProducto }}
     </ion-label>
 
-    <ion-button (click)="mostrarDetalles()" slot="end">
+    <ion-button (click)="mostrarDetalles()" slot="end" style="--background: #D9A85B; --color: #493A35;">
       Ver
     </ion-button>
   </ion-item>
