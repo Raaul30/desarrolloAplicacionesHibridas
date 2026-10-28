@@ -1,2 +1,23 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+/* Archivo: src/theme/variables.scss */
+:root {
+  /* Color Primario Marrón Chocolate */
+  --ion-color-primary: #493A35;
+  --ion-color-primary-rgb: 73, 58, 53;
+  --ion-color-primary-contrast: #FFF8F0;
+  --ion-color-primary-contrast-rgb: 255, 248, 240;
+  --ion-color-primary-shade: #40322e;
+  --ion-color-primary-tint: #5b4d48;
+
+  /* Color Secundario Dorado Suave */
+  --ion-color-secondary: #D9A85B;
+  --ion-color-secondary-rgb: 217, 168, 91;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #bf9450;
+  --ion-color-secondary-tint: #ddb16b;
+
+  /* Fondo de la app y color de texto por defecto */
+  --ion-background-color: #FFF8F0;
+  --ion-text-color: #493A35;
+}
+

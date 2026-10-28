@@ -4,7 +4,7 @@
   Color de acento:       #D9A85B  (Dorado suave)
 -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Mercería Rosa - Productos
     </ion-title>
@@ -13,25 +13,26 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-title size="large">Mercería Rosa</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-grid style="margin-bottom: 20px; background: #FFF8F0; border-radius: 10px; padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+  <!-- Tarjeta de bienvenida (Estilos en home.page.scss) -->
+  <ion-grid class="tarjeta-bienvenida">
     <ion-row class="ion-align-items-center">
       <ion-col size="12" size-md="4">
-        <img src="assets/icon/logo.jpg" alt="Logo Mercería Rosa" style="border-radius: 8px; width: 100%; display: block;"/>
+        <img src="assets/icon/logo.jpg" alt="Logo Mercería Rosa" />
       </ion-col>
       
       <ion-col size="12" size-md="8" class="ion-text-center">
-        <h2 style="color: #493A35; margin-top: 0;">¡Bienvenidos a Mercería Rosa!</h2>
-        <ion-button size="small" style="--background: #493A35; --color: #FFF8F0;">Contactar</ion-button>
+        <h2>¡Bienvenidos a Mercería Rosa!</h2>
+        <ion-button size="small" color="secondary">Contactar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-grid style="background-color: #FFF8F0;">
+  <ion-grid class="contenedor-productos">
     <ion-row>
       <ion-col *ngFor="let producto of listaDeProductos" size="12" size-md="6" size-lg="4">
         <app-producto-item [producto]="producto"></app-producto-item>
