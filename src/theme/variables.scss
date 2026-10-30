@@ -18,6 +18,27 @@
 
   /* Fondo de la app y color de texto por defecto */
   --ion-background-color: #FFF8F0;
-  --ion-text-color: #493A35;
+  --ion-text-color: #FFF8F0;
 }
 
+/* 1. Definimos un bloque de estilos reutilizable mediante un mixin */
+@mixin dark-theme-variables {
+  --ion-color-primary: #493A35;
+  --ion-color-primary-rgb: 73, 58, 53;
+  --ion-color-primary-contrast: #FFF8F0;
+  
+  --ion-background-color: #121212;
+  --ion-text-color: #FFF8F0;
+}
+
+/* 2. Aplicamos el mixin cuando el sistema operativo detecta preferencia oscura */
+@media (prefers-color-scheme: dark) {
+  body {
+    @include dark-theme-variables;
+  }
+}
+
+/* 3. Aplicamos el mixin cuando el servicio añade la clase .dark al body */
+body.dark {
+  @include dark-theme-variables;
+}

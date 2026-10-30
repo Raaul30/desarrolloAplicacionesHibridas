@@ -8,6 +8,12 @@
     <ion-title>
       Mercería Rosa - Productos
     </ion-title>
+    <!-- El contenedor de botones debe ir fuera de ion-title -->
+    <ion-buttons slot="end">
+      <ion-button routerLink="/ajustes">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -24,7 +30,7 @@
       <ion-col size="12" size-md="4">
         <img src="assets/icon/logo.jpg" alt="Logo Mercería Rosa" />
       </ion-col>
-      
+
       <ion-col size="12" size-md="8" class="ion-text-center">
         <h2>¡Bienvenidos a Mercería Rosa!</h2>
         <ion-button size="small" color="secondary">Contactar</ion-button>

@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonButton } from '@ionic/angular';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonButton, IonButtons, IonIcon } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { ProductosVenta } from '../interfaces/productos-venta';
 import { ProductoItemComponent } from '../components/producto-item/producto-item.component';
+import { RouterLink } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { settingsOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonButton, CommonModule, ProductoItemComponent],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonGrid, IonRow, IonCol, IonButton, CommonModule, ProductoItemComponent, RouterLink, IonButtons, IonIcon  ],
 })
 export class HomePage {
 
@@ -67,5 +70,8 @@ export class HomePage {
     { id: 51, nombreProducto: "Boli Borrable", cantidad: 12, imagen: "https://picsum.photos/seed/78/200/200" }
   ];
 
-  constructor() { }
+  constructor() {
+    // Registramos el icono de ajustes que vamos a usar en la vista
+    addIcons({ settingsOutline });
+  }
 }
